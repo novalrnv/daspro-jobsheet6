@@ -4,7 +4,7 @@ public class Pemilihan2Percobaan212 {
     public static void main(String[] args) {
         Scanner input12 = new Scanner(System.in);
         int pilihanmenu;
-        String member;
+        String member, qris;
         double diskon, harga, totalbayar;
 
         System.out.println("-------------------------");
@@ -19,6 +19,8 @@ public class Pemilihan2Percobaan212 {
         input12.nextLine();
         System.out.print("Apakah punya member (y/n) ? = ");
         member = input12.nextLine();
+        System.out.print("Apakah mau pakai QRIS (y/n) ? = ");
+        qris = input12.nextLine();
         System.out.println("-------------------------------------");
 
         if (member.equalsIgnoreCase("y")) {
@@ -39,9 +41,17 @@ public class Pemilihan2Percobaan212 {
             }
 
             totalbayar = harga - (harga * diskon);
-            System.out.println("Total bayar setelah diskon = " + totalbayar);
-        }
-        else if (member.equalsIgnoreCase("n")) {
+            if (qris.equalsIgnoreCase("y")) {
+                totalbayar -= 1000;
+                System.out.println("Pembayaran setelah diskon = " + totalbayar);
+            }else if (qris.equalsIgnoreCase("n")){
+                System.out.println("Pembayaran setelah diskon = " + totalbayar);
+            }else{
+                System.out.println("Pemilihan Qris tidak valid!");
+            }
+
+            // System.out.println("Pembayaran setelah diskon = " + totalbayar);
+        }else if (member.equalsIgnoreCase("n")) {
             if (pilihanmenu == 1){
                 harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -55,11 +65,19 @@ public class Pemilihan2Percobaan212 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return;
             }
-
-            System.out.println("Total bayar = " + harga);
+            
+            if (qris.equalsIgnoreCase("y")) {
+                harga -= 1000;
+                System.out.println("Pembayaran setelah diskon = " + harga);
+            }else if (qris.equalsIgnoreCase("n")){
+                System.out.println("Pembayaran setelah diskon = " + harga);
+            }else{
+                System.out.println("Pemilihan Qris tidak valid!");
+            }
         }else{
             System.out.println("Member tidak valid");
         }
         System.out.println("-------------------------------------");
+        System.out.println("-------------- THANKS ---------------");
     }
 }
