@@ -23,7 +23,7 @@ public class Pemilihan2Percobaan212 {
         qris = input12.nextLine();
         System.out.println("-------------------------------------");
 
-        if (member.equalsIgnoreCase("y")) {
+        if (member.equals("y")) {
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihanmenu == 1){
@@ -41,7 +41,7 @@ public class Pemilihan2Percobaan212 {
             }
 
             totalbayar = harga - (harga * diskon);
-            if (qris.equalsIgnoreCase("y")) {
+            if (qris.equals("y")) {
                 totalbayar -= 1000;
                 System.out.println("Pembayaran setelah diskon = " + totalbayar);
             }else if (qris.equalsIgnoreCase("n")){
@@ -51,7 +51,7 @@ public class Pemilihan2Percobaan212 {
             }
 
             // System.out.println("Pembayaran setelah diskon = " + totalbayar);
-        }else if (member.equalsIgnoreCase("n")) {
+        }else if (member.equals("n")) {
             if (pilihanmenu == 1){
                 harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -66,7 +66,7 @@ public class Pemilihan2Percobaan212 {
                 return;
             }
             
-            if (qris.equalsIgnoreCase("y")) {
+            if (qris.equals("y")) {
                 harga -= 1000;
                 System.out.println("Pembayaran setelah diskon = " + harga);
             }else if (qris.equalsIgnoreCase("n")){
