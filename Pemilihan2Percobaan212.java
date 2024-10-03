@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Pemilihan2Percobaan212 {
     public static void main(String[] args) {
-        Scanner duabelas = new Scanner(System.in);
+        Scanner input12 = new Scanner(System.in);
         int pilihanmenu;
         String member;
         double diskon, harga, totalbayar;
@@ -15,10 +15,10 @@ public class Pemilihan2Percobaan212 {
         System.out.println("3. Paket Bunding (Ricebowl + Ice Tea)");
         System.out.println("-------------------------------------");
         System.out.print("masukkan angka dari menu yang dipilih = ");
-        pilihanmenu = duabelas.nextInt();
-        duabelas.nextLine();
+        pilihanmenu = input12.nextInt();
+        input12.nextLine();
         System.out.print("Apakah punya member (y/n) ? = ");
-        member = duabelas.nextLine();
+        member = input12.nextLine();
         System.out.println("-------------------------------------");
 
         if (member.equalsIgnoreCase("y")) {
